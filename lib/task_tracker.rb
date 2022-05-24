@@ -12,12 +12,13 @@ class TaskTracker
 
   def mark_complete(task)
     fail "Not on the list" unless @list.include? task
-    if @list.include? task
-      @list.delete(task)
-    end
+    @list.delete(task)
+  end
+    #if @list.include? task - refactored to remove this line
+    #end
     # if task is in @list, it's complete so remove from @list
     # if task isn't in @list, give error message
-  end
+ 
 
   def see_list
     fail "Nothing on the list!" if @list.empty?
