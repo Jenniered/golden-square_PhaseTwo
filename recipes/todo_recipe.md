@@ -14,11 +14,9 @@ _Include the name of the method, its parameters, return value, and side effects.
 
 result = check_for_todo(text)
 
+```
 text will be a string (e.g. #TODO Clean the kitchen)
 result will be true or false
-
-
-```
 
 ## 3. Create Examples as Tests
 

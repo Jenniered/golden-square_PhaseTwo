@@ -1,4 +1,4 @@
-require 'DiaryEntry'
+require 'firstdiary_entry'
 
 RSpec.describe DiaryEntry do
   it "gives a title" do

@@ -1,4 +1,4 @@
-require 'DiaryEntry2'
+require 'diary_entry'
 
 RSpec.describe DiaryEntry do
   it "returns title as a string" do
@@ -45,10 +45,10 @@ RSpec.describe DiaryEntry do
 
   context "when the reading_time is more than the time the user has" do
     it "returns last part of the contents for user to read" do 
-      diary_entry = DiaryEntry.new("a title", "some contents one two three have a nice day all sunny afternoon bit of rain or")  
+      diary_entry = DiaryEntry.new("a title", "some contents one two three have a nice day all sunny afternoon bit of rain")  
       diary_entry.reading_chunk(4,2)
       diary_entry.reading_chunk(4,1)
-      expect(diary_entry.reading_chunk(4,1)).to eq "bit of rain or"
+      expect(diary_entry.reading_chunk(4,1)).to eq "bit of rain"
     end
   end
 end
